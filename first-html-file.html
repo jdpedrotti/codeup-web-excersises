@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First HTML File</title>
+    <style>
+        p {
+            border: 1px solid black; accent-color;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button{margin-left: 10px;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="hideable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur ducimus esse expedita facilis fuga minus quae veritatis. Aliquid atque fugit obcaecati officiis pariatur porro quidem sequi unde vero voluptatum. </p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dicta distinctio inventore libero magni molestiae quia quibusdam, quod repudiandae sequi sint soluta sunt? At expedita iste labore neque non quos? </p>
+
+
+    <button id="toggle">Toggle Paragraph</button>
+
+    <script>
+        let toggleButton = document.getElementById("toggle");
+        let paragraph = document.getElementById("hideable");
+        toggleButton.onclick = function () {
+            let classAttribute = paragraph.getAttribute("class");
+            if  (classAttribute === "hidden") {
+                paragraph.removeAttribute("class");
+            } else {
+                paragraph.setAttribute("class", "hidden");
+            }
+        }
+    </script>
+
+</body>
+</html>
