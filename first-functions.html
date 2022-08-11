@@ -29,6 +29,109 @@
             return fahrenheit = celsius * 1.8 + 32;
         }
 
+         let number = 21;
+        // if (number % 2 === 0) {
+        //     console.log("That number is even.");
+        // } else {
+        //     console.log("That number is odd.");
+        // }
+
+        // function isOdd(number){
+        //     if (number % 2 === 1) {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
+        function isOdd(number){
+            return Math.abs(number) % 2 === 1;
+        }
+
+        // if (number % 5 === 0 && number % 3 === 0) {
+        //     console.log("That number is divisible by both 5 and 3.");
+        // } else {
+        //     console.log("That number is either not divisible by 5 or not divisible by 3, or both");
+        // }
+
+
+        //use || for Or, use && for And
+        function divisibleByFiveOrThree(number){
+            return number % 5 === 0 || number % 3 === 0;
+        }
+
+        function divisibleBySevenOrThree(number){
+            return number % 7 === 0 || number % 3 === 0;
+        }
+
+        function divisibleByTwoOrThree(number){
+            return number % 2 === 0 || number % 3 === 0;
+        }
+
+        function oddAndDivisibleByThree(number) {
+            return number % 3 === 0 && Math.abs(number) % 2 === 1;
+        }
+
+        function oddOrDivisibleByThree(number) {
+            return number % 3 === 0 || Math.abs(number) % 2 === 1;
+        }
+
+        //strings
+
+        // let myName = "John";
+        // let myLastName = "Pedrotti";
+        // let myTitle = "Mr.";
+
+        //concatenation = adding strings together
+        //let myFullName = myName + " " + myLastName;
+        // console.log(myFullName);
+        // myFullName = myTitle + " " + myFullName;
+        // console.log(myFullName);
+
+        // let x = 1;
+        // x = x + 1;
+        // console.log(x);
+        //
+        // let sentence = "All the world";
+        // sentence = sentence + "'s a stage";
+        // console.log(sentence);
+        //
+        // console.log("Shakespeare said:  \"All the world's a stage\"");
+        // //Use `` instead of /""/ because its cleaner and less error prone
+        // console.log(`Shakespeare said: "All the world's a stage`);
+        //
+        // console.log(`${myTitle} ${myName} ${myLastName}`);
+
+        function fullName(firstName, middleName, lastName){
+            return `${firstName} ${middleName} ${lastName}`;
+        }
+
+        // let myName = "John";
+        // let myMiddleName = "Daniel";
+        // let myLastName = "Pedrotti";
+        // let myTitle = "Mr.";
+        // let myFullName = myName + myMiddleName + myLastName;
+        // console.log(myFullName);
+        // console.log(`${myName} ${myMiddleName} ${myLastName}`);
+
+        function fullAddress(houseNumber, streetName, city, state, zipCode){
+            return  `${houseNumber} ${streetName} ${city} ${state} ${zipCode}`
+        }
+
+        // let houseNumber = "3901";
+        // let streetName = "Roscher Rd";
+        // let city = "Corpus Christi";
+        // let state = "Texas";
+        // let zipCode = "78418";
+        // let fullAddress = console.log(`${houseNumber} ${streetName} ${city} ${state} ${zipCode}`);
+
+        function temperatureConversion(temperature, isFahrenheit){
+            if (isFahrenheit === true) {
+                return (temperature - 32) * 5/9;
+            } else {
+                return (temperature * 9/5) + 32;
+            }
+        }
 
 
 
