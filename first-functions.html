@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>First Functions</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -191,7 +196,21 @@
             return !(isNaN(value) || typeof value === "boolean");
         }
 
+        // Use parseInt() to add 42 + "42"
+        // parseInt() eliminates decimals
+        //Use parseFloat() to include decimals <- more versatile
+        //Use isNaN to check if something NaN
 
+
+        //Write a function that takes two values.  If the values can be converted to numbers, the function should return their product.  Otherwise, the function should return false.
+
+        function multiply(value1, value2){
+            if (isNaN(parseFloat(value1)) || isNaN(parseFloat(value2))){
+                return false;
+            } else {
+                return parseFloat(value1) * parseFloat(value2);
+            }
+        }
 
 
     </script>
