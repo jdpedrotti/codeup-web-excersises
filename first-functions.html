@@ -6,6 +6,9 @@
 </head>
 <body>
     <script>
+
+        // Basic functions and variable declaration
+
         function calculateCircumference(radius) {
             const pi = 3.14159;
             let circumference = 2 * pi * radius;
@@ -29,6 +32,8 @@
             return fahrenheit = celsius * 1.8 + 32;
         }
 
+        // functions with conditionals
+
          let number = 21;
         // if (number % 2 === 0) {
         //     console.log("That number is even.");
@@ -43,6 +48,8 @@
         //         return false;
         //     }
         // }
+
+        // functions with logical operators
 
         function isOdd(number){
             return Math.abs(number) % 2 === 1;
@@ -76,13 +83,14 @@
             return number % 3 === 0 || Math.abs(number) % 2 === 1;
         }
 
-        //strings
+        //strings and concatenation
 
         // let myName = "John";
         // let myLastName = "Pedrotti";
         // let myTitle = "Mr.";
 
         //concatenation = adding strings together
+
         //let myFullName = myName + " " + myLastName;
         // console.log(myFullName);
         // myFullName = myTitle + " " + myFullName;
@@ -125,6 +133,8 @@
         // let zipCode = "78418";
         // let fullAddress = console.log(`${houseNumber} ${streetName} ${city} ${state} ${zipCode}`);
 
+        //functions with boolean conditionals and parameters
+
         function temperatureConversion(temperature, isFahrenheit){
             if (isFahrenheit === true) {
                 return (temperature - 32) * 5/9;
@@ -165,11 +175,13 @@
             return string.indexOf(char);
         }
 
-        // == vs ===
+        // equality == vs strict equality ===
 
         let numericString = "42";
         let theAnswer = 42;
         numericString == theAnswer;
+
+        // NaN
 
         function isNumber(value) {
             return typeof value === "number";
@@ -178,6 +190,8 @@
         function isNumber(value){
             return !(isNaN(value) || typeof value === "boolean");
         }
+
+
 
 
     </script>
