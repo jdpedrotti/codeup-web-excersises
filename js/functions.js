@@ -17,7 +17,7 @@
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello("John")
+let helloMessage = sayHello("John");
 console.log(helloMessage)
 
 /**
@@ -26,7 +26,7 @@ console.log(helloMessage)
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-let myName = "John"
+let myName = "John";
 console.log(sayHello(myName));
 
 
@@ -60,6 +60,12 @@ function isTwo (number) {
 console.log(random)
 console.log(isTwo(random))
 
+// function isTwo(number) {
+//     return === 2;
+// }
+//
+//console.log(isTwo(random))
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -76,6 +82,9 @@ function calculateTip(pct, bill){
   return total
   }
 
+  // function calculateTip(tipPercent, billTotal){
+  //   return billTotal * tipPercent;
+  // }
 
 
 /**
@@ -86,9 +95,12 @@ function calculateTip(pct, bill){
  */
 
 
- let tip = prompt("What percent do you want to tip?");
- let totalBill = prompt("How much was your bill?")
- alert("Your total is $" + totalBill * tip +" dollars");
+ let totalBill = prompt("How much was your bill?");
+let tip = prompt("What percent do you want to tip?");
+ alert("Your tip is $" + totalBill * tip/100 +" dollars");
+
+
+
 
 
 /**
@@ -105,3 +117,7 @@ function calculateTip(pct, bill){
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(priceBefore, discountPercent){
+    return priceBefore * (1 - discountPercent);
+}
