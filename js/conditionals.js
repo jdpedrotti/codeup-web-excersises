@@ -1,4 +1,3 @@
-"use strict";
 
 /* ########################################################################## */
 
@@ -21,19 +20,18 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-// let analyzeColor = prompt("Name a color");
-//
-// analyzeColor = analyzeColor.toLowerCase();
-//
-//     if (analyzeColor === "blue") {
-//         alert("Blue is the color of the ocean.");
-//     } else if (analyzeColor === "green"){
-//         alert("Green is the color of grass.");
-//     } else {
-//         alert("I don't know anything about " + analyzeColor + ".");
-//     }
-// console.log(analyzeColor)
 
+// function analyzeColor(color){
+//         if (color === "red"){
+//             return "Roses are red";
+//         } else if (color === "orange"){
+//             return "Pumpkins and prison clothes";
+//         } else if (color === "yellow") {
+//             return "Our sun is a yellow star";
+//         } else {
+//             return "I don't even know that color"
+//         }
+// }
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -47,18 +45,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-//let analyzeColor = prompt("Name a color");
 
-//analyzeColor = analyzeColor.toLowerCase();
+// console.log(analyzeColor(randomColor))
 
-// if (randomColor === "blue") {
-//     alert("Blue is the color of the ocean.");
-// } else if (randomColor === "green"){
-//     alert("Green is the color of grass.");
-// } else {
-//    alert("I don't know anything about " + randomColor + ".");
-// }
-// console.log(randomColor)
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -121,22 +110,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
  // function calculateTotal(number, total){
  //    if (number === 0) {
- //        return total * 1
+ //        return total;
  //         alert("Sorry, no discount")
  //     } else if (number === 1) {
- //        return total * 0.1
+ //        return total * 0.9;
  //         alert("You get 10% off!")
  //     } else if (number === 2) {
- //         return total * 0.25
+ //         return total * 0.75;
  //         alert("You get 25% off!")
  //     } else if (number === 3) {
- //         return total * 0.35
+ //         return total * 0.65;
  //         alert("You get 35% off!")
  //     } else if (number === 4) {
- //         return total * 0.5
+ //         return total * 0.5;
  //         alert("You get 50% off!")
  //     } else if (number === 5) {
- //         return total * 0
+ //         return 0;
  //         alert("You get 100% off!")
  //     }
  // }
@@ -152,11 +141,11 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // Generate a random number between 0 and 6
 
 //  var luckyNumber = Math.floor(Math.random() * 6);
-//
+// //
 //  let price = prompt("What was your total bill?");
-//     alert("Your lucky number is " + luckyNumber);
-//     alert("Your price before discount is: $" + price);
-//     alert("Your price after discount is: $" + (price - calculateTotal(luckyNumber, price)));
+//     alert("Your lucky number is " + luckyNumber + "\n" +
+//     "Your price before discount is: $" + price + "\n" +
+//     "Your price after discount is: $" + calculateTotal(luckyNumber, price));
 
 
 /**
@@ -177,9 +166,14 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+// Refactor with functions
 
-confirm("Would you like to enter a number?");
-let number = prompt("Enter a number below");
+//console.log(getNumber())
+
+let wantsToEnterNumber = confirm("Would you like to enter a number?");
+if (wantsToEnterNumber) {
+     number = prompt("Enter a number below");
+}
 if (isNaN(number)) {
     alert("Incorrect input data type");
 } else {
@@ -195,5 +189,6 @@ if (isNaN(number)) {
         alert("This number is negative")
     }
 }
+
 
 
