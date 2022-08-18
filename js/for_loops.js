@@ -1,7 +1,8 @@
 // //1
-// for(i =1; i <= 10; i++){
-//     showMultiplicationTable = 7 * i
-//     console.log("7 x " + i + " = " + showMultiplicationTable);
+// function showMultiplicationTable (number){
+// for(i =1; i <= 10; i++) {
+//     console.log(`${number} * ${i} = ${number * i}`);
+//     }
 // }
 
 // //2
