@@ -2,7 +2,7 @@
 // // declaring an array literal:
 // // each item in an array is an element
 //
-let groceryList = ['bread', 'eggs', 'butter', 'milk'];
+let groceryList = ['bread', 'eggs', 'butter', 'milk', 'Blueberry'];
 //
 //
 // // looping over an array: conditional to access last element
@@ -63,59 +63,81 @@ let prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
 //     console.log(price)
 // });
 
-groceryList.push("potatoes", "serranos");       //ADDS item to the end of an array
-console.log(groceryList);
-groceryList.pop();                   // REMOVES item from the end of an array
-console.log(groceryList);
-
-groceryList.unshift("sliced chedder");     // ADDS to beginning of the array
-console.log(groceryList);
-groceryList.shift();
-console.log(groceryList)                         //REMOVES from beginning of the array
-
-let indexOfButter = groceryList.indexOf("butter");
-console.log(indexOfButter);
-
-groceryList[indexOfButter] = "peanut butter";
-console.log(groceryList);
-
-groceryList[0] = "avacadoes";
-console.log(groceryList);
-
-let firstHalfOfGroceryList = groceryList.slice(0, 2);
-console.log(firstHalfOfGroceryList);
-let secondHalfOfGroceryList = groceryList.slice(2);
-console.log(secondHalfOfGroceryList);
-
-firstHalfOfGroceryList.push("butter");
-
-groceryList = firstHalfOfGroceryList.concat(secondHalfOfGroceryList);
-console.log(groceryList);
-
-groceryList.reverse();
-console.log(groceryList);
-
-groceryList.sort();
-console.log(groceryList);
-console.log(groceryList.reverse());
-
-prices.sort(function (a, b){
-    return a-b;
-})
-console.log(prices);
-
-groceryList[3] = "Blueberries";
-console.log(groceryList);
-console.log(groceryList.sort());
-
-
-// for (i = 0; i < groceryList.length; i++){
-//     groceryList[i] = groceryList[i].toLowerCase();
-// }
+// groceryList.push("potatoes", "serranos");       //ADDS item to the end of an array
+// console.log(groceryList);
+// groceryList.pop();                   // REMOVES item from the end of an array
+// console.log(groceryList);
+//
+// groceryList.unshift("sliced chedder");     // ADDS to beginning of the array
+// console.log(groceryList);
+// groceryList.shift();
+// console.log(groceryList)                         //REMOVES from beginning of the array
+//
+// let indexOfButter = groceryList.indexOf("butter");
+// console.log(indexOfButter);
+//
+// groceryList[indexOfButter] = "peanut butter";
+// console.log(groceryList);
+//
+// groceryList[0] = "avacadoes";
+// console.log(groceryList);
+//
+// let firstHalfOfGroceryList = groceryList.slice(0, 2);
+// console.log(firstHalfOfGroceryList);
+// let secondHalfOfGroceryList = groceryList.slice(2);
+// console.log(secondHalfOfGroceryList);
+//
+// firstHalfOfGroceryList.push("butter");
+//
+// groceryList = firstHalfOfGroceryList.concat(secondHalfOfGroceryList);
+// console.log(groceryList);
+//
+// groceryList.reverse();
+// console.log(groceryList);
+//
+// groceryList.sort();
+// console.log(groceryList);
+// console.log(groceryList.reverse());
+//
+// prices.sort(function (a, b){
+//     return a-b;
+// })
+// console.log(prices);
+//
+// groceryList[3] = "Blueberries";
+// console.log(groceryList);
 // console.log(groceryList.sort());
+//
+//
+// // for (i = 0; i < groceryList.length; i++){
+// //     groceryList[i] = groceryList[i].toLowerCase();
+// // }
+// // console.log(groceryList.sort());
+//
+// groceryList.forEach((item, index, array) => {
+//     array[index] = item.toLowerCase();
+// })
+// console.log(groceryList);
 
-groceryList.forEach((item, index, array) => {
-    array[index] = item.toLowerCase();
-})
-console.log(groceryList);
+groceryList = groceryList.join(' ').toLowerCase().split(' ').sort();
+console.log(groceryList)
+
+let quote = "All the world's a play";
+quote = quote.toLowerCase();
+let quoteArray = quote.split(' ');
+console.log(quoteArray)
+quoteArray = quoteArray.reverse();
+console.log(quoteArray);
+quoteArray.join(' ');
+console.log(quote);
+
+function zatannaMagic(string){
+    let commandArray = string.toLowerCase().split(" ");
+    for (let i = 0; i<commandArray.length; i++){
+        commandArray[i] = (commandArray[i].split('').reverse().join(''));
+    }
+    let command = commandArray.join(' ') + "!";
+    return command.charAt(0).toUpperCase() + command.slice(1);
+}
+
 
