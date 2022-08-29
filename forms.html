@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Forms html</title>
+    <style>
+        body {
+            background-color: #2d2d2d;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email"><br>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"><br>
+        <br>
+        <h4><label for="bio">Bio</label></h4>
+        <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        <legend><h3>How did you hear about us?</h3></legend>
+        <label for="billboard">Billboard</label>
+        <input type="radio" name="marketing" value="Billboard" id="billboard"><br>
+        <br>
+        <label for="radioAdvertisement">Radio Advertisement</label>
+        <input type="radio" name="marketing" value="RadioAdvertisement" id="radioAdvertisement"><br>
+        <br>
+        <label for="internetAdvertisement">Internet Advertisement</label>
+        <input type="radio" name="marketing" value="InternetAdvertisement" id="internetAdvertisement"><br>
+        <br>
+        <label for="other">Other</label>
+        <input type="radio" name="marketing" value="Other" id="other"><br>
+        <br>
+        <h4><label for="browser">Choose your web browser below:</label></h4>
+        <select name="browser" id="browser">
+            <option value="Google">Google</option>
+            <option value="Safari">Safari</option>
+            <option value="FireFox">FireFox</option>
+            <option value="Brave">Brave</option>
+            <option value="Bing">Bing</option>
+        </select><br>
+        <br>
+
+        <input  type="submit" value="Submit">
+    </form>
 
 </body>
 </html>
