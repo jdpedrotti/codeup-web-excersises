@@ -4,27 +4,14 @@
   <head>
 	<meta charset="UTF-8">
 	<title>Intro to HTML</title>
-     <style>
-           body {
-              background-color: black;
-               color: white;
-           }
-           a {
-               color: azure;
-           }
-           /*div {*/
-           /*    text-align: center;*/
-           /*    border: 2px solid white;*/
-           /*    border-radius: 7px;*/
-           /*    padding: 5 px;*/
-           /*}*/
-          </style>
-      </head>
+      <link rel="stylesheet" href="css/site.css">
+      <link rel="stylesheet" href="css/intro-to-css.css">
+  </head>
       <body>
-      <header>
-          <h1>John &quot;P-Drotts&quot;Pedrotti</h1>
-      <h2>Full Stack  Web Developer</h2>
-      <img src="img/john-240x239.png" alt="computer art representation of John Pedrotti">
+        <header>
+          <h1>John &quot;P-Drotts&quot; Pedrotti</h1>
+            <h2>Full Stack  Web Developer</h2>
+            <img src="img/john-240x239.png" alt="computer art representation of John Pedrotti">
         </header>
         <main>
             <section id ="languages">
@@ -33,11 +20,11 @@
             </section>
 
           <h2>Language</h2>
-            <ul>
+            <ul class = "bold">
               <li>JavaScript</li>
-              <li>Java</li>
+              <li class ="bold">Java</li>
               <li>PHP</li>
-              <li>Ruby</li>
+              <li class ="bold">Ruby</li>
             </ul>
           <h2>Main Skills</h2>
             <ol>
@@ -48,7 +35,7 @@
               <li>Team Management, Motivation, Inspiration</li>
             </ol>
             <section>
-          <h2>Prices</h2>
+          <h2 id="prices">Prices</h2>
           <table>
         <!-- <caption>My Prices</caption> -->
             <tr>
