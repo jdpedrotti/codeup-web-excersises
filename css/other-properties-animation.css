@@ -20,7 +20,12 @@ h2 {
     }
 }
 
-/* below is the animation sequence for the paragraph Ipsum lorem */
+/* below is the animation sequence for the paragraph Ipsum lorem and an example of an animation shorthand */
+
+/*  shorthand below     */
+/*p {*/
+/*    animation: 3s infinite alternate slidein;*/
+/*}*/
 
 p {
     animation-duration: 3s;
@@ -38,6 +43,8 @@ p {
      width: 100%
     }
 }
+
+
 
 
 /*    below is an example of how CSS animations make elements move across a page:*/
