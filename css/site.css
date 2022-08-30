@@ -1,7 +1,9 @@
 body {
     background-color: black;
     color: white;
+    margin-left: 5vw;
 }
+/*      vw = viewport width; converts width of page to 100 units; vw basically converts indent to a percent of the page      */
 
 h1 {
     font-family: sans-serif;
@@ -14,3 +16,25 @@ h2 {
 .bold {
     font-weight: bold;
 }
+
+.italic {
+    font-style: italic;
+}
+
+li.italic {
+    font-size: 1.1rem;
+}
+/*     ^^        1.1 rem = 1.1 times size of regular font
+        rem = relative em-height i.e. height of the font      */
+
+ul li {
+    color: lightblue;
+}
+/* descendent selector */
+ol > li {
+    color: chartreuse;
+}
+
+
+
+

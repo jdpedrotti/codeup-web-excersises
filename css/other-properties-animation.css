@@ -1,0 +1,91 @@
+
+/* below is the animation for the header with keyframes, beg middle end*/
+
+h2 {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 50%;
+        width: 100%
+    }
+}
+
+/* below is the animation sequence for the paragraph Ipsum lorem */
+
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+    @keyframes slidein {
+        from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+     margin-left: 0%;
+     width: 100%
+    }
+}
+
+
+/*    below is an example of how CSS animations make elements move across a page:*/
+
+h3 {
+    animation-duration: 3s;
+    animation-name: slidein;
+    transition: all ease .8s;
+    color: black;
+}
+
+h3:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+@keyframes slidein {
+    from {
+        margin-left:100%;
+        width:300%
+    }
+
+    to {
+        margin-left:0%;
+        width:100%;
+    }
+}
+
+/*      below is an example of how you can use CSS to blur an image and clear it up by hovering over it with your cursor */
+
+.invertcolor {
+    width: 400px !important;
+    height: auto;
+    transition: all ease .3s;
+    filter: blur(30px);
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+
+.invertcolor:hover {
+    filter: blur(0px);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
