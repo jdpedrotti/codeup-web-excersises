@@ -16,6 +16,7 @@ body {
     background-size: cover;
     font-family: 'Anek Telugu', sans-serif;
     color: goldenrod;
+    font-size: 1.3rem;
 }
 
 .textbox {
@@ -30,4 +31,35 @@ ul {
     list-style-image: url("/img/john-fuvicon.png");
 }
 
+table {
+    table-layout: fixed;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2rem;
+}
 
+td {
+    border: 1px solid blue;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+a:link {
+    color: goldenrod;
+}
+
+a:visited {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: chartreuse;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+
+}
