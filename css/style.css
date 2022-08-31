@@ -1,4 +1,33 @@
 .fancy-header {
-    color: purple;
+    text-align: center;
+    color: blue;
     text-decoration: underline;
 }
+
+h2 {
+    color: blue;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("/img/yellowstone-buffalo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Anek Telugu', sans-serif;
+    color: goldenrod;
+}
+
+.textbox {
+    border: 2px solid black;
+    padding: 10px;
+    background: gray;
+
+}
+
+
+ul {
+    list-style-image: url("/img/john-fuvicon.png");
+}
+
+
