@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message-info {
+    box-sizing: border-box;
+    width: 600px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: darkblue;
+    background-color: rgba(129, 129, 255, 0.38);
+}
+
+.message-success {
+    box-sizing: border-box;
+    width: 600px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 7px;
+    margin-left: 15px;
+    color: darkgreen;
+    background-color: rgba(2, 255, 2, 0.29);
+}
+
+.message-warning {
+    box-sizing: border-box;
+    width: 600px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 7px;
+    margin-left: 15px;
+    color: #6e6e00;
+    background-color: rgba(255, 255, 0, 0.34);
+}
+
+.message-error {
+    box-sizing: border-box;
+    width: 600px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 7px;
+    margin-left: 15px;
+    color: darkred;
+    background-color: rgba(255, 0, 0, 0.33);
+}
