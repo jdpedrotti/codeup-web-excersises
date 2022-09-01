@@ -1,0 +1,31 @@
+body {
+    margin: 20px;
+}
+
+#main {
+    box-sizing: border-box;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 75px;
+    margin-left: 50px;
+
+    /*outline: 5px solid crimson;*/
+    /*box-shadow: -10px -10px  7px darkslategray,*/
+    /*             14px 14px 6px darkcyan;*/
+}
+
+p {
+    box-sizing: border-box;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 7px;
+    /*  15px top and bottom 25px left and right */
+    padding: 15px 25px;
+    /*margin: auto;           !* margin auto in p centers it within #main  *!*/
+    /*margin: 75px 100px 40px 40px;*/
+/*    ^ means top right bottom left     */
+    margin: 15px auto;
+}
+
