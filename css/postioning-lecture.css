@@ -1,0 +1,37 @@
+/*#ipsum, #quenya, #pirate {*/
+/*    !*width: 25%;*!*/
+/*    !*float: left;*!*/
+/*    !*border: 1px solid black;*!*/
+/*    !*padding: 5px;*!*/
+/*    !*margin: 1rem;*!*/
+/*}*/
+
+#quenya {
+    position: relative;
+}
+
+img[src="img/codeup-logo-with-Codey.png"]{
+    position: fixed;
+    top: 25%;
+    left: 0;
+    z-index: -1;
+}
+
+img[src*="fish"]{
+    position: absolute;
+    left: unset; /* or left: auto; */
+    top: 0;
+    right: 0;
+
+}
+
+footer {
+    width: 20%;
+    margin: auto;
+}
+
+footer p {
+    text-align: center;
+    position: relative;
+    left: 5px;
+}
