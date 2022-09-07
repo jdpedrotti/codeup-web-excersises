@@ -34,3 +34,22 @@ div a {
     width: 150px;
     /*margin: auto;*/
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkgray;
+    padding: 5px;
+    width: 330px;
+    margin: 10px;
+
+}
+
+section p {
+    flex-grow: 1;
+}
