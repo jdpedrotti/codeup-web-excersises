@@ -1,0 +1,5 @@
+.pizza-pic {
+    background-image: url('../img/pizza.png') !important;
+    height: 346px;
+    background-size: cover;
+}
