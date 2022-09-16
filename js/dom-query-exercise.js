@@ -17,8 +17,24 @@ button2.onclick = changeSubHeaderColor;
 //      ^ change subheader color to blue
 
 
-
 let button3 = document.getElementById('button3');
+
+let alternateItemColor = function (){
+    let listItems = document.getElementsByTagName("li");
+
+    for (var i = 0; i < listItems.length; i++) {
+        var dbId = listItems[i].getAttribute("data-dbid");
+        console.log(dbId);
+        if (i % 2 === 0){
+            listItems[i].style.color = 'grey';
+        }
+    }
+}
+button3.onclick = alternateItemColor;
+//      ^alternate list item color
+
+
+let button4 = document.getElementById('button4');
 
 let changeItem1Color = function (){
     let listItems = document.getElementsByTagName('li');
@@ -30,13 +46,14 @@ let changeItem1Color = function (){
         }
     })
 }
-button3.onclick = changeItem1Color;
+button4.onclick = changeItem1Color;
 //      ^change item1 color to blue
 
 
-let button4 = document.getElementById('button4');
+let button5 = document.getElementById('button5');
 
 let changeParagraph = function(){
     document.querySelector('p').innerText = "Mission Accomplished!";
 }
-button4.onclick = changeParagraph;
+button5.onclick = changeParagraph;
+//      ^change paragraph from lorem
