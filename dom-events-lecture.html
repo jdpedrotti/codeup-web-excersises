@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Events</title>
-    <link rel="stylesheet" href="css/dom-events-style.css">
+    <style>
+        .square, #anotherSquare {
+            width: 200px;
+            height: 200px;
+        }
+
+        .square {
+            background-color: hotpink;
+        }
+
+        #anotherSquare {
+            border: 1px solid black;
+        }
+    </style>
 </head>
-<body>
-<!--    <button>The Button</button>-->
-        <button class="square">square</button>
+    <body>
+        <button>The Button</button>
+        <p>The text</p>
+        <div class="square"></div>
+        <div id="anotherSquare"></div>
+        <form action="#">
+            <input type="text" id="formInput">
+            <input type="submit">
+        </form>
 
-
-
-
-<script src="js/dom-events-lecture.js"></script>
+    <script src="js/dom-events-lecture.js"></script>
 
 </body>
 </html>
