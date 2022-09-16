@@ -7,7 +7,12 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+
 <button id="button1">Button 1</button>
+<button id="button2">Button 2</button>
+<button id="button3">Button 3</button>
+<button id="button4">Button 4</button>
+
 
 <ul>
     <li data-dbid="1">Item 1</li>
@@ -34,18 +39,13 @@
         let mainHeader = document.getElementById("main-header");
 
 
-        let button = document.getElementById("button1");
-        function changeMainHeading() {
-            return mainHeader.innerHTML = "Javascript is Cool";
-        }
-
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-         mainHeader.innerHTML = "JavaScript is Cool";
+        //  mainHeader.innerHTML = "JavaScript is Cool";
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+        // subHeader.style.color = 'blue';
         // TODO: Uncomment the next line and get all list items
         let listItems = document.getElementsByTagName("li");
 
@@ -61,12 +61,12 @@
         // TODO: Set text color of li with dbid = 1 to blue
         // let listItems = document.getElementsByTagName('li');
 
-        listItems = Array.from(listItems);
-        listItems.forEach(function(listItem){
-            if (listItem.dataset.dbid === "1") {
-                listItem.style.color = "blue";
-            }
-        });
+        // listItems = Array.from(listItems);
+        // listItems.forEach(function(listItem){
+        //     if (listItem.dataset.dbid === "1") {
+        //         listItem.style.color = "blue";
+        //     }
+        // });
 
         // listItems[0].style.color = 'blue';
 
@@ -74,7 +74,7 @@
         let subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = 'Mission Accomplished!';
+        // subParagraphs[0].innerText = 'Mission Accomplished!';
     })();
 </script>
 
