@@ -17,6 +17,7 @@ button2.onclick = changeSubHeaderColor;
 //      ^ change subheader color to blue
 
 
+
 let button3 = document.getElementById('button3');
 
 let alternateItemColor = function (){
@@ -34,6 +35,7 @@ button3.onclick = alternateItemColor;
 //      ^alternate list item color
 
 
+
 let button4 = document.getElementById('button4');
 
 let changeItem1Color = function (){
@@ -48,6 +50,7 @@ let changeItem1Color = function (){
 }
 button4.onclick = changeItem1Color;
 //      ^change item1 color to blue
+
 
 
 let button5 = document.getElementById('button5');

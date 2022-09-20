@@ -172,4 +172,80 @@ function beeramid(bonus, price){
     return levels;
 }
 
+const attendance = {
+    miami: 32789,
+    buffalo: 45678,
+    portland: 24567
+}
 
+// Given attendance object write a function that returns the total attendance across all teams
+
+function totalAttendance (attendanceObject){
+    let attendanceArray = Object.values(attendanceObject);
+    let total = 0;
+   for (let i = 0; i < attendanceArray.length; i++){
+       total += attendanceArray[i];
+   }
+   return total
+}
+
+// example below is same warmup, but as a for in loop
+
+// function totalAttendance(attendanceObject){
+//     let total = 0;
+//     for (const prop in attendance){
+//         total += attendance[prop]
+//     }
+//     return total;
+// }
+
+// given attendance object, write a function that returns the average attendance
+
+function averageAttendance(attendanceObject){
+    let total = 0;
+    for (const prop in attendance){
+        total += attendance[prop]
+    }
+    return total/Object.keys(attendance).length;
+}
+
+//      given attendance object, write a function that returns an object with totalAttendance and averageAttendance properties set to the correct values
+
+function createObject(attendanceObject){
+    let total = 0;
+    for (const prop in attendance){
+        total += attendance[prop]
+    }
+    return {
+        totalAttendance: total,
+        averageAttendance: total/Object.keys(attendance).length
+    }
+}
+
+
+/**
+ * Convert Address to Object
+ * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
+ *
+ * Examples
+ *
+ * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
+ * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
+ **/
+
+let address = "8646 Sunny Oaks"
+
+// function convertAddressToObject(addressString){
+//     return {
+//         streetNumber: addressString.substring(0, addressString.indexOf(' ')),
+//         streetName: addressString.substring(addressString.indexOf(' ')+1)
+//     }
+// }
+
+function convertAddressToObject(addressString){
+    let addressArray = addressString.split(' ');
+        return {
+            streetNumber: addressArray[0],
+            streetName: addressArray.slice(1, addressArray.length).join(' ')
+    }
+}
