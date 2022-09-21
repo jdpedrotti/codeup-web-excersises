@@ -35,6 +35,21 @@
 
   // $("h1, p, li").effect("highlight", {color: "#669966"}, 1);  ?????
 
+  $('h1').on('click', function(){
+      $(this).css('background-color', 'chartreuse');
+  });
+
+  $('p').on('dblclick', function(){
+      $(this).css('font-size', '18px');
+  });
+
+  $('li').hover(function(){
+          $(this).css('color', 'red');
+      },
+      function(){
+          $(this).css('color', 'unset');
+      });
+
 
 
 </script>
