@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+
+  <style>
+    .invisible {
+      visibility: hidden;
+    }
+  </style>
+  <!--  <link rel="stylesheet" href="css/jquery-faq.css">-->
+</head>
+<body>
+
+<p>National Parks FAQ</p>
+  <dl>
+    <dt>Yosemite</dt>
+    <dd class="invisible">located in California (gross)</dd>
+
+    <dt>Yellowstone</dt>
+    <dd class="invisible">2.2 million acres</dd>
+
+    <dt>Glacier</dt>
+    <dd class="invisible">over 700 lakes</dd>
+
+    <dt>Grand Canyon</dt>
+    <dd class="invisible">its very grand</dd>
+
+    <dt>Zion</dt>
+    <dd class="invisible">located in Utah (noice)</dd>
+
+    <dt>Grand Teton</dt>
+    <dd class="invisible">inspiration for painter Mark Maggiori</dd>
+
+    <dt>Bryce Canyon</dt>
+    <dd class="invisible">contains Hoodoos, or odd shaped rock pillars</dd>
+
+    <dt>Rocky Mountain</dt>
+    <dd class="invisible">well what else are they supposed to be made of?</dd>
+
+    <dt>Arches</dt>
+    <dd class="invisible">also in Utah (noice x2)</dd>
+
+    <dt>Great Smokey Mountains</dt>
+    <dd class="invisible">500,000 acres small</dd>
+  </dl>
+
+<button id="clickMe">Click Me</button>
+
+<script src="js/jquery-3.6.1.js"></script>
+
+
+<script>
+
+  $("button").on('click', function (){
+    $("dd").toggleClass('invisible');
+  });
+
+</script>
+
+
+</body>
+</html>
