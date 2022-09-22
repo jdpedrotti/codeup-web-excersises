@@ -95,9 +95,7 @@
   });
 
   $("li").on('click', function (){
-    $("ul").each(function (){
-      $(this).children().first().css("color", "blue");
-    });
+      $(this).parent().children().first().css("color", "blue");
   });
 
 
