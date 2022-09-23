@@ -20,13 +20,18 @@
 
 
 <div class="container row m-auto">
-    <div id='map' class="mx-auto mt-4" ;'></div>
+    <div id='map' class="mx-auto mt-4"></div>
 </div>
 
 <form class="mx-auto mt-2 w-25">
     <label for="zoom">Set Zoom</label>
     <input type="text" name="zoom" id="zoom" class="my-2">
     <button id="zoomSubmit">Submit</button>
+</form>
+<form class="mx-auto w-25 mt-2">
+    <label for="setMarker">Enter an address</label>
+    <input type="text" name="setMarker" id="setMarker" class="m-2">
+    <button id="setMarkerButton">Set Marker</button>
 </form>
 
 <script>
@@ -54,9 +59,29 @@
         .addTo(map);
     const codeupPopUp = new mapboxgl.Popup()
         .setHTML('<p class="mt-3" style="width: 100px;">Codeup</p>');
-    codeupMarker.setPopup(codeupPopUp)
+    codeupMarker.setPopup(codeupPopUp);
 
 
+
+    let coords;
+    function getCoords(address, token){
+        geocode(address, token).then(function (coordinates){
+        console.log(coordinates);
+        coords = coordinates;
+        })
+    }
+    getCoords("600 Navarro St, San Antonio", MAPBOX_API_TOKEN);
+    console.log(coords)
+
+
+    document.getElementById("setMarkerButton").addEventListener('click', function (e){
+        e.preventDefault();
+        const address = document.getElementById("setMarker");
+        geocode(address, MAPBOX_API_TOKEN).then(function (coordinates){
+            const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
+            map.setCenter(coordinates)
+        })
+    })
 
 </script>
 
