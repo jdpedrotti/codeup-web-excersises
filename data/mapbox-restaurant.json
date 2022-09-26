@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Wings 'N More",
+    "content": "Best wings and sauce in town",
+    "coords": [-96.315110, 30.638600]
+
+  }, {
+  "title": "Chick Fil A",
+  "content": "Everyone knows Chick Fil A",
+  "coords": [-96.319710, 30.616270]
+}, {
+  "title": "Dixie Chicken",
+  "content": "The staple bar of Northgate",
+  "coords": [-96.346451, 30.617960]
+
+  }
+]
