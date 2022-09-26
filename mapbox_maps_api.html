@@ -33,7 +33,7 @@
         <input type="text" name="setMarker" id="setMarker" class="m-2">
         <button id="setMarkerButton">Set Marker</button>
     </form>
-
+    <script src="js/jquery-3.6.1.min.js"></script>
     <script>
         mapboxgl.accessToken = MAPBOX_API_TOKEN;
         const map = new mapboxgl.Map({
@@ -101,18 +101,17 @@
             })
         })
 
-        $.ajax("data/mapbox-restaurant.json").done(function (favoritePlaces) {
-            favoritePlaces.forEach(function (value) {
+        $.ajax("data/mapbox-restaurant.json").done(function (data) {
+            data.forEach(function (value) {
                 // favoritePlaces.forEach(function(value){
                 let newMarker = new mapboxgl.Marker()
                     .setLngLat(value.coords)
                     .addTo(map);
                 let newPop = new mapboxgl.Popup()
-                    .setHTML(`<p class="mt-3" style="width: 250px;">${value.name}</p>`);
+                    .setHTML(`<p class="mt-3" style="width: 250px;">${value.title}</p>`);
                 newMarker.setPopup(newPop);
             });
         });
-
 
 
     </script>
