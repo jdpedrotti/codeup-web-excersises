@@ -333,7 +333,7 @@ function arrModified(arr) {
 }
 arrModified(["rodrigo", "marquez"]);
 // in class example:
-myArray = [0, 1, 2, , 3, 4, 5, 6, 7, 8, 9, 10];
+myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function removesOdds(array) {
     const newArray = [];
     for (let i = 0; i < array.length; i++) {
