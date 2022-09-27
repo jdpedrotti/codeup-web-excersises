@@ -98,7 +98,7 @@ $(function () {
         console.log(data.wind.speed)
         console.log(windCardinalDirection(data.wind.deg));
 
-        $('.card').append(`<p>The current temperature is ${data.main.temp}</p>`)
+        // $('.card').append(`<p>The current temperature is ${data.main.temp}</p>`)
     });
 
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
@@ -110,7 +110,7 @@ $(function () {
         console.log("forecasts:")
         console.log(data);
         console.log(data.list.dt_txt)
-        $('h5').append(`${data.list[index].dt_txt}</p>`)
+        $('h5').append(`${data.list[0].dt_txt}</p>`)
 
     });
 
@@ -122,7 +122,25 @@ $(function () {
 
 
 
-
+    for(let i=0; i < data.list.length; i++){
+        let seperatedDateAndTime = data.list[i].dt_txt.split(" ");
+        if(seperatedDateAndTime[1] === "00:00:00"){
+            $(".cards").append(`
+       <div class="card text-center" style="width: 16rem;">
+    <div class="card-header">
+    ${seperatedDateAndTime[0]}
+    </div>
+      <ul class="list-group list-group-flush">
+            <li class="list-group-item">Temperature is ${data.list[i].main.temp}</li>
+            <li class="list-group-item">Feels like ${data.list[i].main.feels_like}</li>
+            <li class="list-group-item">Description: ${data.list[i].weather[0].description}</li>
+            <li class="list-group-item">Humidity: ${data.list[i].main.humidity}</li>
+            <li class="list-group-item">Pressure: ${data.list[i].main.pressure}</li>
+      </ul>
+    </div>
+`)
+        }
+    }
 
 });
 
