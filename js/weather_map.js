@@ -176,6 +176,7 @@ function printWeatherCards(data){
         e.preventDefault();
         const address = $("#setMarker").val();
         geocode(address, MAPBOX_API_TOKEN).then(function (coordinates){
+            $(".mapboxgl-marker").remove();
             const userMarker = new mapboxgl.Marker({draggable: true}).setLngLat(coordinates).addTo(map);
             map.setCenter(coordinates)
             console.log(coordinates)
@@ -243,23 +244,30 @@ function printWeatherCards(data){
         //         .setLngLat([e.lngLat.lng, e.lngLat.lng])
         //         .addTo(map);
         //     }
+        $(".mapboxgl-marker").remove();
+
         const userMarker = new mapboxgl.Marker().setLngLat(e.lngLat).addTo(map);
         map.setCenter(e.lngLat)
         map.setZoom(10)
+
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: OPEN_WEATHER_APPID,
             lat:    e.lngLat.lat,
             lon:   e.lngLat.lng,
             units: "imperial"
         }).done(function(data) {
+
             console.log("forecasts:")
             console.log(data);
             console.log(data.list.dt_txt)
-            // $('h5').append(`${data.list[0].dt_txt}</p>`)
+
             printWeatherCards(data);
+
+            $("#currentLocation").html(`Location: ${data.city.name}`)
 
 
         });
+
     });
 
 });
