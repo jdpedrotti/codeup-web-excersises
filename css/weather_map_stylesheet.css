@@ -3,6 +3,32 @@
     font-weight: bold;
 }
 
+#locationContainer {
+     display: flex;
+    flex-direction: row;
+}
+
+p {
+    width: 50%;
+    margin: 0;
+}
+
 .card {
     display: inline-block;
 }
+
+ #map {
+     width: 90%;
+     height: 400px;
+ }
+
+body {
+    background-color: #333333;
+    color: white;
+}
+
+.list-group-item {
+    background-color: #848487;
+    color: white
+}
+
