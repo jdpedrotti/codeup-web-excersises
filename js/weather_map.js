@@ -1,26 +1,5 @@
 $(function () {
 
-//     $.get("http://api.openweathermap.org/data/2.5/forecast", {
-//         APPID: OPEN_WEATHER_APPID,
-//         lat: 29.423017,
-//         lon: -98.48527,
-//         units: "imperial"
-//     }).done(function (data) {
-//         console.log(data);
-//         console.log(data.city.population);
-//         console.log(data.list[0].visibility);
-//         data.list.forEach((forecast, index) =>{
-//            if (index < 5) {
-//                console.log(forecast)
-//            }
-//
-//         })
-//
-//     });
-// })
-
-
-
 
     function windCardinalDirection(degrees){
         let cardinalDirection = '';
@@ -124,7 +103,7 @@ $(function () {
 
 
 
-//    for loop to populate and update cards with current weather info
+//    for loop to populate cards with current weather info
 
 function printWeatherCards(data){
     console.log(data)
@@ -170,7 +149,7 @@ function printWeatherCards(data){
     }
 
 
-    // set marker and location by search bar
+    // set marker and location by using search bar
 
     document.getElementById("setMarkerButton").addEventListener('click', function (e){
         e.preventDefault();
@@ -199,22 +178,6 @@ function printWeatherCards(data){
         })
     })
 
-    // mapboxgl.accessToken = MAPBOX_API_TOKEN;
-    // const map = new mapboxgl.Map({
-    //     container: 'map', // container ID
-    //     style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
-    //     center: [-74.5, 40], // starting position [lng, lat]
-    //     zoom: 9, // starting zoom
-    //     projection: 'globe' // display the map as a 3D globe
-    // });
-    // map.on('style.load', () => {
-    //     map.setFog({}); // Set the default atmosphere style
-    // });
-    // map.setZoom(12);
-    // map.setCenter([-96.3344, 30.6280]);
-
-    // $("#map").show();
-
 
     //mapbox token and default map center on refresh
 
@@ -236,14 +199,8 @@ function printWeatherCards(data){
 
     map.on('click', (e) => {
         console.log(`a click happened at ${e.lngLat}`);
-            // let longlat = e.lngLat.split(', ')
         console.log(typeof e.lngLat)
 
-        // function setMarker() {
-        //     let marker1 = new mapboxgl.Marker()
-        //         .setLngLat([e.lngLat.lng, e.lngLat.lng])
-        //         .addTo(map);
-        //     }
         $(".mapboxgl-marker").remove();
 
         const userMarker = new mapboxgl.Marker().setLngLat(e.lngLat).addTo(map);
