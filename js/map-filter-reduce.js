@@ -108,3 +108,4 @@ let total = prices.reduce(function(total, itemPrice, index){
     return total + itemPrice;
 });
 $("#output").append(`<p>The total is ${totalCost}</p>`);
+
