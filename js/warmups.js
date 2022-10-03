@@ -333,7 +333,7 @@ function arrModified(arr) {
 }
 arrModified(["rodrigo", "marquez"]);
 // in class example:
-myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function removesOdds(array) {
     const newArray = [];
     for (let i = 0; i < array.length; i++) {
@@ -694,31 +694,31 @@ function moveFirstToLast(array){
      *    ]) ➞ [5, 5, 4]
      */
 
-    let students =[
-            {
-                id: 1,
-                name: "Jacek",
-                notes: [5, 3, 4, 2, 5, 5]
-            },
-        {
-            id: 2,
-            name: "Ewa",
-            notes: [2, 3, 3, 3, 2, 5]
-        },
-        {
-            id: 3,
-            name: "Zygmunt",
-            notes: [2, 2, 4, 4, 3, 3]
-        }
-]
-
-function getStudentTopNotes(arrayOfStudentObjects){
-        const topNotes = [];
-        arrayOfStudentObjects.forEach(studentObject => {
-            topNotes.push(Math.max(...studentObject.notes));
-        });
-        return topNotes
-}
+    // let students =[
+//             {
+//                 id: 1,
+//                 name: "Jacek",
+//                 notes: [5, 3, 4, 2, 5, 5]
+//             },
+//         {
+//             id: 2,
+//             name: "Ewa",
+//             notes: [2, 3, 3, 3, 2, 5]
+//         },
+//         {
+//             id: 3,
+//             name: "Zygmunt",
+//             notes: [2, 2, 4, 4, 3, 3]
+//         }
+// ]
+//
+// function getStudentTopNotes(arrayOfStudentObjects){
+//         const topNotes = [];
+//         arrayOfStudentObjects.forEach(studentObject => {
+//             topNotes.push(Math.max(...studentObject.notes));
+//         });
+//         return topNotes
+// }
 
 // function getStudentTopNotes(arrayOfStudentObjects) {
 //         let topNotes = [];
@@ -777,4 +777,30 @@ function getStudentTopNotes(arrayOfStudentObjects){
 // Write a function that accepts an array of bowling scores and returns the highest
 //
 // Write a function that accepts an array of bowling scores and returns true if the highest score is divisible by 3
+
+
+
+
+/*================== DOM WARMUPS ===================================*/
+
+// When the user clicks the button that has the text "Change Heading", the
+// text of the <h1> element changes to read "I pwn the DOM"
+
+// Every time the user enters a character in the input with id "source", that
+// character appears in the <p> element with the id "output"
+// when user clicks button that says change heading the text of the h1
+//changes to "I pwn the DOM"
+
+// $("#button?").on('click', function (){
+//     $("h1").text("I pwn the DOM")
+// })
+
+document.getElementsByTagName("button")[0].addEventListener('click', function (e){
+    document.getElementsByTagName("h1")[0].innerHTML = "I pwn the DOM";
+});
+
+$("source").on('keyup', function (){
+    $("#output").text($('#source').val())
+    // console.log($("#source").val())
+})
 
